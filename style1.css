@@ -1,0 +1,139 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('img.jpg'); /* Add your background image here */
+    background-size: cover; /* Ensure the background image covers the entire page */
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(5px); /* Add a subtle blur effect for a modern feel */
+}
+
+/* Navigation Menu Styles */
+header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Reduced gap for a more balanced layout */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Slightly smaller font size for a more modest look */
+    font-weight: normal; /* Regular font weight for a cleaner style */
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3); /* Subtle background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a soft effect */
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #4CAF50; /* Soft green on hover for better contrast */
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.3); /* Active state with a lighter background */
+}
+
+/* Login Box Styles */
+.login-container {
+    position: relative;
+    z-index: 10; /* Make sure the login box is above the background */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.login-box {
+    width: 350px;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #a7a5e0, #fda085); /* Gradient background */
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #fff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid #4CAF50;
+    color: #000;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #81C784, #4CAF50);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
