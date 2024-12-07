@@ -9,6 +9,14 @@ const PORT = 3000;
 // Enable CORS for cross-origin requests (if your frontend is on a different domain)
 app.use(cors());
 
+// Set EJS as the template engine
+app.set('view engine', 'ejs');
+
+// Define routes to render views
+app.get('/', (req, res) => {
+  res.render('index');
+});
+
 // Serve static files (optional, e.g., uploaded files)
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
@@ -18,7 +26,7 @@ const storage = multer.diskStorage({
     cb(null, "uploads/"); // Directory where files will be saved
   },
   filename: (req, file, cb) => {
-    const uniqueName = '${Date.now()}-${file.originalname}';
+    const uniqueName = `{Date.now()}-${file.originalname}`;
     cb(null, uniqueName); // Save file with a unique name
   },
 });
@@ -33,11 +41,11 @@ app.post("/upload", upload.single("file"), (req, res) => {
   res.status(200).json({
     message: "File uploaded successfully",
     fileName: req.file.filename,
-    filePath: '/uploads/${req.file.filename}',
+    filePath: `/uploads/${req.file.filename}`,
   });
 });
 
 // Start the server
 app.listen(PORT, () => {
-  console.log('Server is running on http://localhost:${PORT}');
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

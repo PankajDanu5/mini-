@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed PDF</title>
+    <title>File Upload</title>
+    <link rel="stylesheet" href="/styles/style2.css">
+</head>
+<body>
+    <h1>COMPUTER SCIENCE NOTES<embed></h1>
+    <embed src="cs1.pdf" width="600" height="500" type="application/pdf">
+    <embed src="cs1.1.pdf" width="600" height="500" type="application/pdf">
+       <h1> Upload a File</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="fileUpload">Choose a file:</label>
+            <input type="file" id="fileUpload" name="fileUpload" required>
+            <button type="submit">Upload</button> 
+        
+
+</body>
+</html>
