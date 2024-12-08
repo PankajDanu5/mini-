@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('img.jpg'); /* Add your background image here */
+    background-image: url('/assets/img.jpg'); /* Add your background image here */
     background-size: cover; /* Ensure the background image covers the entire page */
     background-position: center;
     background-attachment: fixed;

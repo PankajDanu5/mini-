@@ -11,12 +11,31 @@ app.use(cors());
 
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
-
+app.use(express.static("static"));
 // Define routes to render views
 app.get('/', (req, res) => {
   res.render('index');
 });
 
+// Define routes to render views
+app.get('/home', (req, res) => {
+  res.render('home');
+});
+
+// Define routes to render views
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
+// Define routes to render views
+app.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+// Define routes to render views
+app.get('/dashboard', (req, res) => {
+  res.render('dsahboard');
+});
 // Serve static files (optional, e.g., uploaded files)
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
